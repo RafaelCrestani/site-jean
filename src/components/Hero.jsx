@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="hero__col">
             <p className="hero__lead reveal" data-reveal data-delay="140">
               Residenciais e comerciais, do briefing ao 3D. Plantas, cortes, vistas e imagens
-              realistas — pra você enxergar cada detalhe da obra antes da primeira pedra.
+              realistas — pra você enxergar cada detalhe da obra antes do primeiro tijolo.
             </p>
 
             <div className="hero__actions reveal" data-reveal data-delay="200">
