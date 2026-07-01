@@ -65,7 +65,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 22px;
-  height: clamp(340px, 60vh, 560px);
+  aspect-ratio: 16 / 9;
   background: var(--surface-2);
   box-shadow: 0 34px 70px -40px rgba(0, 0, 0, 0.5);
 }
@@ -73,6 +73,13 @@
 .serv__parallax {
   position: absolute;
   inset: -8% 0;
+}
+
+/* For contain-fit media (nothing to crop): match the frame exactly instead
+   of overscanning, so a parallax shift reveals the frame's own background
+   (matching the media's letterbox bars) rather than shrinking the content. */
+.serv__parallax--flush {
+  inset: 0;
 }
 
 @media (min-width: 900px) {

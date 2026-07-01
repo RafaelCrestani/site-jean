@@ -11,6 +11,12 @@
   display: block;
 }
 
+/* Shows the full media, letterboxed against the slot's own background
+   instead of cropping the overflow. */
+.image-slot__img--contain {
+  object-fit: contain;
+}
+
 .image-slot__empty {
   position: absolute;
   inset: 0;

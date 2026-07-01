@@ -1,5 +1,6 @@
 import Eyebrow from './Eyebrow';
 import ImageSlot from './ImageSlot';
+import servVideo from '../assets/hero-3d-crossfade.mp4';
 import './Services.css';
 
 const SERVICES = [
@@ -57,8 +58,15 @@ export default function Services() {
           </div>
 
           <div className="serv__figure reveal" data-reveal data-delay="120">
-            <div className="serv__parallax" data-parallax="0.04">
-              <ImageSlot id="serv-visual" placeholder="Render ou prancha técnica" />
+            <div className="serv__parallax serv__parallax--flush" data-parallax="0.04">
+              <ImageSlot
+                id="serv-visual"
+                video
+                fit="contain"
+                src={servVideo}
+                alt="Render 3D em crossfade do projeto"
+                placeholder="Render ou prancha técnica"
+              />
             </div>
             <div className="img-chip">
               <span className="img-chip__dot" />
