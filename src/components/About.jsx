@@ -1,6 +1,7 @@
 import Eyebrow from './Eyebrow';
 import ImageSlot from './ImageSlot';
 import { CheckIcon } from './icons';
+import jeanRetrato from '../assets/jean-maciel-retrato.webp';
 import './About.css';
 
 const FEATURES = [
@@ -17,7 +18,12 @@ export default function About() {
         <div className="about__grid">
           <div className="about__figure reveal" data-reveal>
             <div className="about__parallax" data-parallax="0.04">
-              <ImageSlot id="sobre-retrato" placeholder="Foto do arquiteto" />
+              <ImageSlot
+                id="sobre-retrato"
+                src={jeanRetrato}
+                alt="Jean Maciel, arquiteto e urbanista"
+                placeholder="Foto do arquiteto"
+              />
             </div>
           </div>
 
