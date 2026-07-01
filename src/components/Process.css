@@ -1,0 +1,91 @@
+.proc__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 760px;
+}
+
+.proc__eyebrow {
+  margin-bottom: 22px;
+}
+
+/* gap + background create the hairline separators between cards. */
+.proc__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  margin-top: clamp(40px, 5vw, 64px);
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.proc__card {
+  background: var(--proc-card);
+  padding: clamp(26px, 3vw, 38px);
+  transition: background 0.25s;
+}
+
+.proc__card:hover {
+  background: var(--proc-card-hover);
+}
+
+.proc__card--feat {
+  background: var(--proc-feat-bg);
+}
+
+.proc__card--feat:hover {
+  background: var(--proc-feat-bg-hover);
+}
+
+.proc__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proc__num {
+  font: 300 clamp(30px, 3.4vw, 46px)/1 'Satoshi', sans-serif;
+  color: var(--gold);
+}
+
+.proc__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+}
+
+.proc__dot--feat {
+  border: none;
+  background: var(--gold);
+}
+
+.proc__title {
+  margin: 26px 0 0;
+  font: 600 18px/1.2 'Satoshi', sans-serif;
+  color: var(--ink);
+}
+
+.proc__card--feat .proc__title {
+  color: var(--proc-feat-title);
+}
+
+.proc__desc {
+  margin: 9px 0 0;
+  font: 400 14.5px/1.55 'Satoshi', sans-serif;
+  color: var(--body);
+}
+
+.proc__card--feat .proc__desc {
+  color: var(--proc-feat-body);
+}
+
+@media (min-width: 900px) {
+  .proc__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

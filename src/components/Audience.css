@@ -1,0 +1,52 @@
+.aud {
+  background: var(--bg-deep);
+  color: var(--deep-text);
+  padding: clamp(80px, 11vw, 140px) 0;
+}
+
+.aud__head {
+  max-width: 680px;
+}
+
+.aud__eyebrow {
+  margin-bottom: 22px;
+}
+
+.aud__title {
+  margin: 0;
+  font: 300 clamp(30px, 4.2vw, 50px)/1.08 'Satoshi', sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--deep-text);
+}
+
+.aud__grid {
+  margin-top: clamp(38px, 5vw, 60px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.aud__item {
+  padding: 24px 22px;
+  border-top: 1px solid var(--deep-line);
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.aud__item:first-child {
+  padding-left: 0;
+}
+
+.aud__item:last-child {
+  padding-right: 0;
+}
+
+.aud__num {
+  font: 300 20px/1 'Satoshi', sans-serif;
+  color: var(--gold);
+}
+
+.aud__label {
+  font: 500 clamp(17px, 1.7vw, 20px)/1.2 'Satoshi', sans-serif;
+  color: var(--deep-text);
+}

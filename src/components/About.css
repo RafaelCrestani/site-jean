@@ -1,0 +1,86 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+.about__figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  aspect-ratio: 4 / 5;
+  background: var(--surface);
+  box-shadow: 0 34px 70px -38px rgba(0, 0, 0, 0.5);
+}
+
+.about__parallax {
+  position: absolute;
+  inset: -8% 0;
+}
+
+.about__eyebrow {
+  margin-bottom: 24px;
+}
+
+.about__name {
+  margin: 0;
+  font: 300 clamp(32px, 4.4vw, 52px)/1.05 'Satoshi', sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.about__role {
+  margin: 10px 0 0;
+  font: 500 14px/1 'Satoshi', sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.about__text {
+  margin: 16px 0 0;
+  font: 400 clamp(15.5px, 1.4vw, 17px)/1.66 'Satoshi', sans-serif;
+  color: var(--body);
+  max-width: 52ch;
+}
+
+.about__text:first-of-type {
+  margin-top: 26px;
+}
+
+.about__features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px 28px;
+  margin-top: 34px;
+}
+
+.about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.about__check {
+  color: var(--gold);
+  margin-top: 2px;
+  flex: none;
+}
+
+.about__feature-title {
+  font: 600 14.5px/1.3 'Satoshi', sans-serif;
+  color: var(--ink);
+}
+
+.about__feature-desc {
+  font: 400 13px/1.45 'Satoshi', sans-serif;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 0.82fr 1fr;
+  }
+}

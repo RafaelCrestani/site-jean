@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------------ *
+ * Design tokens — ported 1:1 from the JM Arquitetura handoff prototype.
+ * The `--gold` value can be overridden at runtime (see data/site.js).
+ * ------------------------------------------------------------------ */
+
+:root {
+  --gold: #c39843;
+  --bg: #262d36;
+  --bg-band: #222933;
+  --bg-alt: #2c333d;
+  --bg-deep: #1c222a;
+  --surface: #333b45;
+  --surface-2: #303842;
+  --ink: #f2eee5;
+  --body: #b4bac2;
+  --muted: #948e82;
+  --muted-2: #8a857a;
+  --muted-3: #7c7a70;
+  --navlink: #aeb3bb;
+  --navlink-hover: #f2eee5;
+  --line: rgba(243, 239, 230, 0.12);
+  --line-2: rgba(243, 239, 230, 0.14);
+  --line-soft: rgba(243, 239, 230, 0.08);
+  --line-strong: rgba(243, 239, 230, 0.28);
+  --hover-wash: rgba(243, 239, 230, 0.05);
+  --cta-bg: var(--gold);
+  --cta-bg-hover: #b0883b;
+  --cta-text: #20262e;
+  --cta-icon: #20262e;
+  --btn-line: rgba(243, 239, 230, 0.18);
+  --btn-bg: rgba(243, 239, 230, 0.06);
+  --proc-card: #262d36;
+  --proc-card-hover: #2e353f;
+  --proc-feat-bg: #171c23;
+  --proc-feat-bg-hover: #12161c;
+  --proc-feat-title: #f2eee5;
+  --proc-feat-body: #a9aeb6;
+  --deep-text: #f3eee4;
+  --deep-line: rgba(243, 238, 228, 0.16);
+  --nav-scrim: rgba(30, 36, 44, 0.86);
+  --menu-scrim: rgba(30, 36, 44, 0.98);
+  --chip-scrim: rgba(15, 19, 24, 0.66);
+  --fab-bg: var(--gold);
+  --fab-bg-hover: #b0883b;
+  --fab-icon: #20262e;
+  --fab-ring-color: #efeae0;
+  --fab-shadow: rgba(0, 0, 0, 0.45);
+  --fab-border: rgba(32, 38, 46, 0.3);
+}
+
+html[data-theme='light'] {
+  --gold: #c39843;
+  --bg: #f4f0e8;
+  --bg-band: #efeae0;
+  --bg-alt: #ece6db;
+  --bg-deep: #242b33;
+  --surface: #e7e0d3;
+  --surface-2: #e2dacb;
+  --ink: #2f363f;
+  --body: #5e656e;
+  --muted: #8b8579;
+  --muted-2: #7a7566;
+  --muted-3: #93917f;
+  --navlink: #4a535d;
+  --navlink-hover: #1c222a;
+  --line: rgba(54, 62, 73, 0.1);
+  --line-2: rgba(54, 62, 73, 0.14);
+  --line-soft: rgba(54, 62, 73, 0.08);
+  --line-strong: rgba(54, 62, 73, 0.25);
+  --hover-wash: rgba(255, 255, 255, 0.35);
+  --cta-bg: #262d36;
+  --cta-bg-hover: #1a2028;
+  --cta-text: #f4f0e8;
+  --cta-icon: var(--gold);
+  --btn-line: rgba(54, 62, 73, 0.18);
+  --btn-bg: rgba(255, 255, 255, 0.4);
+  --proc-card: #f4f0e8;
+  --proc-card-hover: #efe9de;
+  --proc-feat-bg: #262d36;
+  --proc-feat-bg-hover: #20262e;
+  --proc-feat-title: #f4f0e8;
+  --proc-feat-body: #c3c7cc;
+  --deep-text: #f7f3ec;
+  --deep-line: rgba(237, 231, 219, 0.16);
+  --nav-scrim: rgba(244, 240, 232, 0.86);
+  --menu-scrim: rgba(244, 240, 232, 0.98);
+  --chip-scrim: rgba(38, 45, 54, 0.62);
+  --fab-bg: #262d36;
+  --fab-bg-hover: #1a2028;
+  --fab-icon: #f4f0e8;
+  --fab-ring-color: var(--gold);
+  --fab-shadow: rgba(38, 45, 54, 0.28);
+  --fab-border: color-mix(in srgb, var(--gold) 55%, transparent);
+}

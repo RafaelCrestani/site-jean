@@ -1,0 +1,52 @@
+.mobilemenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: var(--menu-scrim);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 24px 40px -24px rgba(0, 0, 0, 0.5);
+  padding: 8px clamp(20px, 5vw, 64px) 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.mobilemenu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobilemenu__link {
+  font: 500 16px 'Satoshi', sans-serif;
+  color: var(--ink);
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.mobilemenu__cta {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  font: 500 15px 'Satoshi', sans-serif;
+  padding: 15px;
+  border-radius: 999px;
+}
+
+/* Menu is a mobile-only affordance. */
+@media (min-width: 900px) {
+  .mobilemenu {
+    display: none;
+  }
+}

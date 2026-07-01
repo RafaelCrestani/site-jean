@@ -1,0 +1,51 @@
+.contact {
+  padding: clamp(84px, 12vw, 150px) 0;
+}
+
+.contact__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+  text-align: center;
+}
+
+.contact__eyebrow {
+  margin-bottom: 26px;
+  justify-content: center;
+}
+
+.contact__title {
+  margin: 0 auto;
+  font: 300 clamp(34px, 5.4vw, 68px)/1.04 'Satoshi', sans-serif;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 16ch;
+}
+
+.contact__accent {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.contact__lead {
+  margin: 24px auto 0;
+  font: 400 clamp(16px, 1.5vw, 18px)/1.6 'Satoshi', sans-serif;
+  color: var(--body);
+  max-width: 48ch;
+}
+
+.contact__actions {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Larger CTA variant used on the contact section. */
+.btn-wa--lg {
+  font-size: 15.5px;
+  padding: 18px 32px;
+  box-shadow: 0 16px 36px -14px rgba(0, 0, 0, 0.55);
+}
