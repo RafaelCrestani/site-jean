@@ -163,8 +163,10 @@ div[id] {
 }
 
 /* ============================ GSAP reveal base ============================ */
-/* Elements start hidden; GSAP flips them in. A no-JS / reduced-motion
-   fallback below keeps them visible if the reveal never runs. */
+/* Elements start hidden; GSAP flips them in. A no-JS fallback below keeps
+   them visible if the reveal never runs (GSAP failed to load, etc). Motion
+   always plays regardless of prefers-reduced-motion — a deliberate choice
+   for this site, not an oversight. */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -174,13 +176,6 @@ div[id] {
 html.no-anim .reveal {
   opacity: 1;
   transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 /* ============================ Keyframes ============================ */

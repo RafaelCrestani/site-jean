@@ -20,9 +20,3 @@
   transform: scale(1.07);
   background: var(--fab-bg-hover);
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .fab {
-    animation: none;
-  }
-}

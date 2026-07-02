@@ -15,15 +15,15 @@ CustomEase.create('jmHouse', 'M0,0 C0.16,1 0.3,1 1,1');
  *   • [data-parallax] — subtle scrubbed vertical parallax on images
  *   • [data-counter]  — count-up numbers when the stats band enters view
  *
+ * Runs unconditionally — the site's motion is a deliberate brand choice, not
+ * gated behind prefers-reduced-motion.
+ *
  * `scopeRef` is the root element the selectors are queried within.
  */
 export function useSiteAnimations(scopeRef) {
   useLayoutEffect(() => {
     const root = scopeRef.current;
     if (!root) return undefined;
-
-    const reduce =
-      window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const ctx = gsap.context(() => {
       // ----- Reveal on scroll ------------------------------------------------
@@ -48,26 +48,24 @@ export function useSiteAnimations(scopeRef) {
       // Each [data-parallax] layer is inset by -8%/-9% inside its frame, giving
       // ~7% of overflow per side. Move in yPercent (relative to the layer's own
       // height) so the crop stays covered at any responsive height.
-      if (!reduce) {
-        gsap.utils.toArray('[data-parallax]').forEach((el) => {
-          const speed = parseFloat(el.getAttribute('data-parallax')) || 0.05;
-          const range = Math.min(6.5, speed * 130); // ~6.5% @0.05, ~5.2% @0.04
-          gsap.fromTo(
-            el,
-            { yPercent: -range },
-            {
-              yPercent: range,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: el,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: true,
-              },
-            }
-          );
-        });
-      }
+      gsap.utils.toArray('[data-parallax]').forEach((el) => {
+        const speed = parseFloat(el.getAttribute('data-parallax')) || 0.05;
+        const range = Math.min(6.5, speed * 130); // ~6.5% @0.05, ~5.2% @0.04
+        gsap.fromTo(
+          el,
+          { yPercent: -range },
+          {
+            yPercent: range,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          }
+        );
+      });
 
       // ----- Count-up counters ----------------------------------------------
       gsap.utils.toArray('[data-counter]').forEach((el) => {
@@ -79,11 +77,6 @@ export function useSiteAnimations(scopeRef) {
           if (pad) s = s.padStart(pad, '0');
           el.textContent = s + suffix;
         };
-
-        if (reduce) {
-          render(target);
-          return;
-        }
 
         const obj = { v: 0 };
         render(0);
