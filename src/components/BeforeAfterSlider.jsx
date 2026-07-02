@@ -52,7 +52,18 @@ export default function BeforeAfterSlider({
     };
   }, [setFromClientX]);
 
-  const onPointerDown = (e) => {
+  // On mouse/pen, clicking or dragging anywhere in the image jumps the
+  // divider there. On touch, that same whole-image behavior would hijack
+  // vertical scrolling (any swipe over the image gets read as a drag), so
+  // touch is restricted to the handle itself — see onHandlePointerDown.
+  const onRootPointerDown = (e) => {
+    if (e.pointerType === 'touch') return;
+    draggingRef.current = true;
+    setFromClientX(e.clientX);
+  };
+
+  const onHandlePointerDown = (e) => {
+    e.stopPropagation();
     draggingRef.current = true;
     setFromClientX(e.clientX);
   };
@@ -77,7 +88,7 @@ export default function BeforeAfterSlider({
     <div
       ref={rootRef}
       className="ba"
-      onPointerDown={onPointerDown}
+      onPointerDown={onRootPointerDown}
       role="group"
       aria-label="Comparação antes e depois: desenho técnico e projeto 3D"
     >
@@ -102,6 +113,7 @@ export default function BeforeAfterSlider({
         type="button"
         className="ba__handle"
         style={{ left: `${pos}%` }}
+        onPointerDown={onHandlePointerDown}
         onKeyDown={onKeyDown}
         role="slider"
         aria-label="Arraste para comparar desenho técnico e 3D"

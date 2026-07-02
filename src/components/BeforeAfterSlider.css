@@ -4,8 +4,11 @@
   height: 100%;
   overflow: hidden;
   border-radius: inherit;
+  /* Whole-image click-to-jump is a mouse/pen-only affordance (see
+     onRootPointerDown) — the resize cursor only shows on those devices
+     anyway. touch-action stays at its default (scrollable) here so a swipe
+     over the image scrolls the page; only .ba__handle opts out of that. */
   cursor: ew-resize;
-  touch-action: none;
   user-select: none;
 }
 
@@ -78,6 +81,9 @@
   align-items: center;
   justify-content: center;
   cursor: ew-resize;
+  /* Opts this element out of native touch scrolling so a finger dragging
+     the handle isn't fought by the browser's own pan gesture. */
+  touch-action: none;
   box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.55);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
