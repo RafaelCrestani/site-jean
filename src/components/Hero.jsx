@@ -1,7 +1,9 @@
 import { links } from '../data/site';
 import Eyebrow from './Eyebrow';
-import ImageSlot from './ImageSlot';
+import BeforeAfterSlider from './BeforeAfterSlider';
 import { WhatsAppIcon, ArrowUpRight } from './icons';
+import heroTecnico from '../assets/hero-tecnico.webp';
+import heroRender from '../assets/hero-render.webp';
 import './Hero.css';
 
 export default function Hero() {
@@ -17,12 +19,13 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="hero__title reveal" data-reveal data-delay="80">
-          Projetos que nascem do <span className="hero__title-accent">seu jeito de viver</span>.
-        </h1>
-
         <div className="hero__grid">
           <div className="hero__col">
+            <h1 className="hero__title reveal" data-reveal data-delay="80">
+              Projetos que nascem do{' '}
+              <span className="hero__title-accent">seu jeito de viver</span>.
+            </h1>
+
             <p className="hero__lead reveal" data-reveal data-delay="140">
               Residenciais e comerciais, do briefing ao 3D. Plantas, cortes, vistas e imagens
               realistas — pra você enxergar cada detalhe da obra antes do primeiro tijolo.
@@ -46,13 +49,14 @@ export default function Hero() {
           </div>
 
           <div className="hero__figure reveal" data-reveal data-delay="160">
-            <div className="hero__parallax" data-parallax="0.05">
-              <ImageSlot id="hero-main" placeholder="Render principal do projeto" />
-            </div>
-            <div className="img-chip">
-              <span className="img-chip__dot" />
-              Projeto residencial · 3D
-            </div>
+            <BeforeAfterSlider
+              beforeSrc={heroTecnico}
+              afterSrc={heroRender}
+              beforeAlt="Desenho técnico da fachada do projeto"
+              afterAlt="Render 3D realista da fachada do projeto"
+              beforeLabel="Técnico"
+              afterLabel="3D"
+            />
           </div>
         </div>
       </div>

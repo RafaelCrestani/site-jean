@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: calc(clamp(96px, 14vh, 150px) + 20px) 0 clamp(56px, 8vw, 96px);
+  padding: calc(clamp(104px, 15vh, 168px) + 32px) 0 clamp(80px, 11vw, 132px);
 }
 
 .hero__top {
@@ -30,23 +30,23 @@
 }
 
 .hero__title {
-  margin: 26px 0 0;
-  font: 300 clamp(38px, 6.6vw, 86px)/1.03 'Satoshi', sans-serif;
-  letter-spacing: -0.025em;
+  margin: 0;
+  font: 500 clamp(34px, 5vw, 62px)/1.05 'Satoshi', sans-serif;
+  letter-spacing: -0.022em;
   color: var(--ink);
-  max-width: 15ch;
+  max-width: 16ch;
 }
 
 .hero__title-accent {
   color: var(--gold);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(30px, 4vw, 56px);
-  margin-top: clamp(34px, 5vw, 58px);
+  gap: clamp(36px, 5vw, 72px);
+  margin-top: clamp(48px, 6.5vw, 84px);
 }
 
 .hero__col {
@@ -92,20 +92,17 @@
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  height: clamp(360px, 54vh, 580px);
+  /* Matches the 4:3 framing of the before/after images (1600×1195) so the
+     comparison shows in full, with no cropping. */
+  aspect-ratio: 1600 / 1195;
   background: var(--surface);
   box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.5);
-}
-
-.hero__parallax {
-  position: absolute;
-  inset: -9% 0;
 }
 
 @media (min-width: 900px) {
   .hero__grid {
     grid-template-columns: 1.02fr 0.98fr;
-    align-items: end;
+    align-items: center;
   }
   .hero__meta {
     display: flex;
