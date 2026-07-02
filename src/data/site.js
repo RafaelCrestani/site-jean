@@ -10,7 +10,7 @@ export const config = {
   phoneLabel: '+55 18 99668-0381',
   instagram: 'jeanmaciel.jm',
   email: 'macieljean46@gmail.com',
-  city: 'José Bonifácio - SP',
+  city: 'Planalto - SP',
   gold: '#C39843', // brand accent (options: #C39843 #B0894A #C9A24B #98773A)
 };
 
