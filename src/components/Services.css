@@ -65,7 +65,11 @@
   position: relative;
   overflow: hidden;
   border-radius: 22px;
-  aspect-ratio: 16 / 9;
+  /* Portrait (9:16) to match the corte→3D video — phone-format, centered in
+     the column instead of stretching it full width. */
+  aspect-ratio: 9 / 16;
+  width: min(100%, clamp(280px, 27vw, 350px));
+  margin-inline: auto;
   background: var(--surface-2);
   box-shadow: 0 34px 70px -40px rgba(0, 0, 0, 0.5);
 }

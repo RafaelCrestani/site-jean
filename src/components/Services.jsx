@@ -1,6 +1,6 @@
 import Eyebrow from './Eyebrow';
 import ImageSlot from './ImageSlot';
-import servVideo from '../assets/hero-3d-crossfade.mp4';
+import servVideo from '../assets/servicos-corte-ao-3d.mp4';
 import './Services.css';
 
 const SERVICES = [
