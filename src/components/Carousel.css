@@ -1,0 +1,123 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.carousel__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+  background: var(--surface-2);
+  /* Allow vertical page scroll; horizontal swipes are handled in JS. */
+  touch-action: pan-y;
+  outline: none;
+}
+
+.carousel__viewport:focus-visible {
+  box-shadow: 0 0 0 3px var(--gold);
+}
+
+.carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ----- Nav arrows ----- */
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--chip-scrim);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #f4f0e8;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel__nav:hover {
+  background: var(--gold);
+  color: var(--cta-text);
+}
+
+.carousel__nav--prev {
+  left: 14px;
+}
+
+.carousel__nav--next {
+  right: 14px;
+}
+
+.carousel__nav:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* ----- Caption + dots bar ----- */
+.carousel__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.carousel__caption {
+  font: 500 14px/1.4 'Satoshi', sans-serif;
+  color: var(--body);
+}
+
+.carousel__dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.carousel__dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--line-strong);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.carousel__dot:hover {
+  background: var(--muted);
+}
+
+.carousel__dot.is-active {
+  background: var(--gold);
+  transform: scale(1.25);
+}
+
+.carousel__dot:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
