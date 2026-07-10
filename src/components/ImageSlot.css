@@ -40,6 +40,6 @@
 
 .image-slot__cap {
   max-width: 24ch;
-  font: 500 12.5px/1.4 'Satoshi', sans-serif;
+  font: 500 12px/1.33 'Satoshi', sans-serif;
   letter-spacing: 0.04em;
 }

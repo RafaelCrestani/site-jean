@@ -14,7 +14,7 @@
 
 .aud__title {
   margin: 0;
-  font: 300 clamp(30px, 4.2vw, 50px)/1.08 'Satoshi', sans-serif;
+  font: 300 clamp(28px, 4vw, 40px)/1.2 'Satoshi', sans-serif;
   letter-spacing: -0.02em;
   color: var(--deep-text);
 }
@@ -47,6 +47,6 @@
 }
 
 .aud__label {
-  font: 500 clamp(17px, 1.7vw, 20px)/1.2 'Satoshi', sans-serif;
+  font: 500 20px/1.2 'Satoshi', sans-serif;
   color: var(--deep-text);
 }

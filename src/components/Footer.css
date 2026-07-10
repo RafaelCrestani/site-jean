@@ -18,14 +18,14 @@
 
 .footer__blurb {
   margin: 20px 0 0;
-  font: 400 14.5px/1.6 'Satoshi', sans-serif;
+  font: 400 16px/1.5 'Satoshi', sans-serif;
   color: var(--muted-2);
   max-width: 38ch;
 }
 
 .footer__heading {
   margin: 0 0 18px;
-  font: 500 11.5px/1 'Satoshi', sans-serif;
+  font: 500 12px/1 'Satoshi', sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold);
@@ -38,7 +38,7 @@
 }
 
 .footer__link {
-  font: 400 15px/1 'Satoshi', sans-serif;
+  font: 400 16px/1 'Satoshi', sans-serif;
   color: var(--navlink);
   transition: color 0.25s;
 }
@@ -51,7 +51,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font: 400 15px/1.3 'Satoshi', sans-serif;
+  font: 400 16px/1.3 'Satoshi', sans-serif;
   color: var(--navlink);
 }
 
@@ -76,7 +76,7 @@
 }
 
 .footer__bottom span {
-  font: 400 12.5px/1 'Satoshi', sans-serif;
+  font: 400 12px/1 'Satoshi', sans-serif;
   color: var(--muted-3);
 }
 

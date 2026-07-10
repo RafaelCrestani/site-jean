@@ -8,7 +8,7 @@
 
 .serv__title {
   margin: 0;
-  font: 300 clamp(30px, 4.2vw, 50px)/1.08 'Satoshi', sans-serif;
+  font: 300 clamp(28px, 4vw, 40px)/1.2 'Satoshi', sans-serif;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
@@ -44,19 +44,19 @@
 }
 
 .serv__num {
-  font: 300 clamp(26px, 2.6vw, 34px)/1 'Satoshi', sans-serif;
+  font: 300 clamp(20px, 2vw, 24px)/1 'Satoshi', sans-serif;
   color: var(--gold);
 }
 
 .serv__name {
   margin: 0;
-  font: 500 clamp(19px, 2vw, 23px)/1.2 'Satoshi', sans-serif;
+  font: 500 clamp(20px, 2vw, 24px)/1.33 'Satoshi', sans-serif;
   color: var(--ink);
 }
 
 .serv__desc {
   margin: 8px 0 0;
-  font: 400 15px/1.6 'Satoshi', sans-serif;
+  font: 400 16px/1.5 'Satoshi', sans-serif;
   color: var(--body);
   max-width: 46ch;
 }

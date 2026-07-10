@@ -39,7 +39,7 @@
   gap: 9px;
   background: var(--cta-bg);
   color: var(--cta-text);
-  font: 500 15px 'Satoshi', sans-serif;
+  font: 500 16px 'Satoshi', sans-serif;
   padding: 15px;
   border-radius: 999px;
 }

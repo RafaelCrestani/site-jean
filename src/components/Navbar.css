@@ -56,14 +56,14 @@
 }
 
 .nav__name {
-  font: 600 13.5px/1 'Satoshi', sans-serif;
+  font: 500 16px/1 'Satoshi', sans-serif;
   letter-spacing: 0.14em;
   color: var(--ink);
 }
 
 .nav__tag {
-  font: 500 9px/1 'Satoshi', sans-serif;
-  letter-spacing: 0.3em;
+  font: 500 12px/1 'Satoshi', sans-serif;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold);
   margin-top: 5px;
@@ -83,7 +83,7 @@
 }
 
 .nav__link {
-  font: 500 14px/1 'Satoshi', sans-serif;
+  font: 500 16px/1 'Satoshi', sans-serif;
   color: var(--navlink);
   padding: 5px 0;
   border-bottom: 1.5px solid transparent;
@@ -101,7 +101,7 @@
   gap: 9px;
   background: var(--cta-bg);
   color: var(--cta-text);
-  font: 500 13.5px/1 'Satoshi', sans-serif;
+  font: 500 16px/1 'Satoshi', sans-serif;
   padding: 12px 20px;
   border-radius: 999px;
   transition: background 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),

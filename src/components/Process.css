@@ -48,7 +48,7 @@
 }
 
 .proc__num {
-  font: 300 clamp(30px, 3.4vw, 46px)/1 'Satoshi', sans-serif;
+  font: 300 clamp(24px, 3vw, 32px)/1 'Satoshi', sans-serif;
   color: var(--gold);
 }
 
@@ -66,7 +66,7 @@
 
 .proc__title {
   margin: 26px 0 0;
-  font: 600 18px/1.2 'Satoshi', sans-serif;
+  font: 500 clamp(20px, 2vw, 24px)/1.33 'Satoshi', sans-serif;
   color: var(--ink);
 }
 
@@ -76,7 +76,7 @@
 
 .proc__desc {
   margin: 9px 0 0;
-  font: 400 14.5px/1.55 'Satoshi', sans-serif;
+  font: 400 16px/1.5 'Satoshi', sans-serif;
   color: var(--body);
 }
 

@@ -91,7 +91,7 @@ div[id] {
 /* ============================ Section heading ============================ */
 .section-title {
   margin: 0;
-  font: 300 clamp(30px, 4.2vw, 50px)/1.08 'Satoshi', sans-serif;
+  font: 300 clamp(28px, 4vw, 40px)/1.2 'Satoshi', sans-serif;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
@@ -103,7 +103,7 @@ div[id] {
   gap: 10px;
   background: var(--cta-bg);
   color: var(--cta-text);
-  font: 500 15px/1 'Satoshi', sans-serif;
+  font: 500 16px/1 'Satoshi', sans-serif;
   padding: 16px 28px;
   border-radius: 999px;
   transition: background 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -124,7 +124,7 @@ div[id] {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font: 500 15px/1 'Satoshi', sans-serif;
+  font: 500 16px/1 'Satoshi', sans-serif;
   color: var(--ink);
   padding: 8px 2px;
   border-bottom: 1.5px solid var(--line-strong);
@@ -148,7 +148,7 @@ div[id] {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #f4f0e8;
-  font: 500 11.5px/1 'Satoshi', sans-serif;
+  font: 500 12px/1 'Satoshi', sans-serif;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 9px 14px;
